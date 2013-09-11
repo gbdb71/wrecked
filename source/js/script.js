@@ -1,4 +1,220 @@
-﻿// ---------------------------------- CONST
+﻿ 
+var av = {} ;
+av.startPage = function(ctx) {
+    	
+// #layer1
+	ctx.save();
+	ctx.transform(1, 0, 0, 1, 0, -652);
+	
+// #rect2991
+	ctx.fillStyle = 'rgb(125, 212, 255)';
+	ctx.beginPath();
+	ctx.rect(0, 652, 900, 200);
+
+	ctx.fill();
+	
+// #text2987
+	ctx.strokeStyle = '#3D454D';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.fillStyle = 'rgb(51, 102, 102)';
+	ctx.font = "normal bold 40px Comic Sans MS";
+
+	ctx.strokeText("Wrecked", 210, 743);
+
+	ctx.strokeText("Sailors", 518, 743);
+	
+// #rect3780
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 3;
+	ctx.fillStyle = 'rgb(140, 106, 56)';
+	ctx.beginPath();
+	ctx.rect(0, 852, 900, 200);
+	ctx.fill();
+	
+// #path3782
+	ctx.save();
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.transform(1, 0, 0, 1, 0, 652);
+	ctx.moveTo(0, 230);
+	ctx.bezierCurveTo(312, 215, 600, 229, 900, 228);
+	ctx.stroke();
+	ctx.restore();
+	
+// #path3795
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.moveTo(0, 920);
+	ctx.bezierCurveTo(303, 910, 602, 912, 900, 919);
+	ctx.stroke();
+	
+// #path3797
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.moveTo(0, 953);
+	ctx.bezierCurveTo(327, 945, 697, 959, 900, 952);
+	ctx.stroke();
+	
+// #path3799
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.moveTo(0, 988);
+	ctx.bezierCurveTo(296, 976, 599, 987, 900, 986);
+	ctx.stroke();
+	
+// #path3801
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.moveTo(0, 1019);
+	ctx.bezierCurveTo(303, 1021, 619, 1030, 900, 1018);
+	ctx.stroke();
+	
+// #path3803
+	ctx.save();
+	ctx.lineJoin = 'miter';
+	ctx.strokeStyle = 'rgb(64, 48, 25)';
+	ctx.lineCap = 'butt';
+	ctx.miterLimit = 4;
+	ctx.lineWidth = 3;
+	ctx.beginPath();
+	ctx.transform(1, 0, 0, 1, 0, 652);
+	ctx.moveTo(0, 200);
+	ctx.bezierCurveTo(294, 194, 605, 205, 900, 200);
+	ctx.stroke();
+	ctx.restore();
+	
+	var sX = 120;
+	var sY = 945;
+	var sp = 165;
+	var txt = ["Tutorial","Level 1","Level 2","Level 3","Level 4"] ;
+	var txtSub = ["","\u201ebegining\u201d","\u201echallenge\u201d","\u201edisaster\u201d","\u201eshark bay\u201d"]
+	
+	for (var i=0; i< 5 ; i++) {
+		ctx.strokeSyle = "#403019";
+		ctx.fillStyle = '#eea522' ;
+		ctx.lineWidth = 1;
+		ctx.beginPath();
+		ctx.arc(sX+i*sp,sY,61,0,Math.PI*2);
+		ctx.stroke();
+		ctx.fill();
+		
+		ctx.strokeSyle = "#403019";
+		ctx.fillStyle = '#336666' ;
+		ctx.lineWidth = 3;
+		ctx.beginPath();
+		ctx.arc(sX+i*sp,sY,40,0,Math.PI*2);
+		ctx.stroke();
+		ctx.fill();
+		
+		ctx.font = "18px comic sans ms";
+		ctx.textBaseline = "middle" ;
+		ctx.textAlign = "center" ;
+		ctx.lineWidth = 1;
+		ctx.strokeSyle = "#403019";
+		ctx.fillStyle = '#ddddff' ;
+		ctx.fillText(txt[i],sX+i*sp,sY);
+		ctx.font = "12px comic sans ms";
+		ctx.fillStyle = '#bbbbee' ;
+		ctx.fillText(txtSub[i],sX+i*sp,sY+18);
+	
+		
+		for (var t =0; t < 8 ; t++) {
+			var tX = sX+i*sp + 51 * Math.cos(Math.PI*2/8*t) ;
+			var tY = sY		 + 51 * Math.sin(Math.PI*2/8*t) ;
+			ctx.strokeSyle = "#aa8800";
+			ctx.fillStyle = '#c9b74b' ;
+			ctx.lineWidth = 2;
+			ctx.beginPath();
+			ctx.arc(tX,tY,4,0,Math.PI*2);
+			ctx.stroke();
+			ctx.fill();
+		}
+	}
+	
+	ctx.beginPath();
+	ctx.strokeStyle = 'rgb(235, 235, 235)';
+	ctx.fillStyle = '#ffffff' ;
+	ctx.lineWidth = 5;
+	ctx.arc(450,730,49,0,Math.PI*2);
+	ctx.fill();
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = 'rgb(235, 235, 235)';
+	ctx.fillStyle = '#7dd4ff' ;
+	ctx.lineWidth = 5;
+	ctx.arc(450,730,32,0,Math.PI*2);
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.translate(29,-40);
+// #path5728
+	ctx.fillStyle = 'rgb(255, 0, 0)';
+	ctx.beginPath();
+	ctx.moveTo(437, 795);
+	ctx.bezierCurveTo(444, 791, 445, 787, 448, 782);
+	ctx.lineTo(468, 791);
+	ctx.bezierCurveTo(466, 799, 454, 811, 448, 814);
+	ctx.closePath();
+	ctx.fill();
+	
+// #path5787
+	ctx.fillStyle = 'rgb(255, 0, 0)';
+	ctx.beginPath();
+	ctx.moveTo(407, 745);
+	ctx.bezierCurveTo(400, 748, 398, 752, 395, 757);
+	ctx.lineTo(376, 747);
+	ctx.bezierCurveTo(378, 739, 391, 727, 397, 725);
+	ctx.closePath();
+	ctx.fill();
+	
+// #path5789
+	ctx.fillStyle = 'rgb(255, 0, 0)';
+	ctx.beginPath();
+	ctx.moveTo(449, 760);
+	ctx.bezierCurveTo(446, 752, 443, 750, 438, 746);
+	ctx.lineTo(451, 729);
+	ctx.bezierCurveTo(458, 732, 468, 747, 469, 753);
+	ctx.closePath();
+	ctx.fill();
+	
+// #path5791
+	ctx.fillStyle = 'rgb(255, 0, 0)';
+	ctx.beginPath();
+	ctx.moveTo(394, 782);
+	ctx.bezierCurveTo(397, 789, 400, 791, 405, 795);
+	ctx.lineTo(393, 813);
+	ctx.bezierCurveTo(385, 809, 375, 795, 374, 789);
+	ctx.closePath();
+	ctx.fill();
+	ctx.restore();
+	ctx.restore();
+
+}
+
+
+// ---------------------------------- CONST
 av.c = {
 	PI_2: Math.PI / 2, 
 	PI_3_4: 3* Math.PI / 4 , 
@@ -13,34 +229,22 @@ av.c = {
 
 // ---------------------------------- UTIL
 av.util = { 
-    fixConsole: function(alertFallback) {    
-        if (typeof console === "undefined") {
-            console = {}; 
-        }
-        if (typeof console.log === "undefined") {
-            if (alertFallback) { console.log = function(msg) { alert(msg); }; } 
-            else { console.log = function() {}; }
-        }
-        if (typeof console.dir === "undefined") {
-            if (alertFallback) { 
-                console.dir = function(obj) { alert("DIR: "+obj); }; 
-            }
-            else { console.dir = function() {}; }
-        }
-    },
+    
     addV: function(v1,v2) {
 		var x =  v1.v*Math.cos(v1.a) + v2.v*Math.cos(v2.a) ;
 		var y =  v1.v*Math.sin(v1.a) + v2.v*Math.sin(v2.a);
 		var v = Math.sqrt(x*x+y*y) ;
 		var ang = Math.atan2(y,x) ;
-		return {v: v , a: ang}
+		var result = {v: v , a: ang} ;
+		return result ;
 	},
 	subV: function(v1,v2) {
 		var x =  v1.v*Math.cos(v1.a) - v2.v*Math.cos(v2.a) ;
 		var y =  v1.v*Math.sin(v1.a) - v2.v*Math.sin(v2.a);
 		var v = Math.sqrt(x*x+y*y) ;
 		var ang = Math.atan2(y,x) ;
-		return {v: v , a: ang}
+		var result = {v: v , a: ang} ;
+		return result ;
 	},
 	roundRect: function(ctx, x, y, width, height, radius, fill, stroke) {
 	  ctx.beginPath();
@@ -70,12 +274,13 @@ av.util = {
 		var cl = " " + elem.className + " ";
 		elem.className = cl.replace(new RegExp("\x20"+c+"\x20"),"").trim() ;
 	},
-	tmpl: function(elem,tmpl,data) {
-		var tmpl = tmpl.innerHTML;
+	tmpl: function(elem,template,data) {
+		var tmpl = template.innerHTML;
 		var tags = tmpl.match(/(\{\{\w*\}\})/ig) ;
 		if (tags && tags.length && data) {
 			for (var i=0; i<tags.length; i++) {
-				tmpl = tmpl.replace(tags[i],data[tags[i].replace(/(\{\{)|(\}\})/ig,"")]);
+				var dat = data[tags[i].replace(/(\{\{)|(\}\})/ig,"")] ;
+				tmpl = tmpl.replace(tags[i], (dat == undefined || dat == null) ? "" : dat );
 			}
 		}
 		elem.innerHTML= tmpl;
@@ -87,10 +292,12 @@ av.canvas = {
 	init: function() {
 		var canvas = document.getElementById('myCanvas');
 		canvas.height = window.innerHeight ;
+		this.h = canvas.height ;
 		var w = window.innerWidth ;
-		if ( w < 1000 ) {
-			this.scale = w / 998 ;
-		}
+		// this.scale = 1 ;
+		// if ( w < 1000 ) {
+			// this.scale = w / 998 ;
+		// }
 		canvas.width = 998 ;
 		this.elem = canvas ;
 		this.ctx = canvas.getContext('2d');
@@ -102,8 +309,8 @@ av.canvas = {
 		
 		this.initPatt();
 		
-		this.ctx.scale(this.scale,this.scale);
-		this.bgCtx.scale(this.scale,this.scale);
+		// this.ctx.scale(this.scale,this.scale);
+		// this.bgCtx.scale(this.scale,this.scale);
 		
 		return  { ctx: this.ctx, elem: canvas } ;
 	},
@@ -124,7 +331,7 @@ av.canvas = {
 			img.data[i] = 114+rnd; // 144, 166, 107
 			img.data[i+1] = 136 + rnd;
 			img.data[i+2] = 77+rnd ;
-			img.data[i+3] = 255;
+			img.data[i+3] = 250;
 		}
 		ctx.putImageData(img,0,0);
 		this.pattGrass = this.ctx.createPattern(canvas,"repeat");
@@ -136,20 +343,20 @@ av.canvas = {
 				img.data[i] = 114+rnd; 
 				img.data[i+1] = 136 + rnd;
 				img.data[i+2] = 77+rnd ;
-				img.data[i+3] = 255;
+				img.data[i+3] = 250;
 				img.data[i+4] = 114+rnd; 
 				img.data[i+5] = 136 + rnd;
 				img.data[i+6] = 77+rnd ;
-				img.data[i+7] = 255;
+				img.data[i+7] = 250;
 				
 				img.data[i+200] = 114+rnd; 
 				img.data[i+200+1] = 136 + rnd;
 				img.data[i+200+2] = 77+rnd ;
-				img.data[i+200+3] = 255;
+				img.data[i+200+3] = 250;
 				img.data[i+200+4] = 114+rnd; 
 				img.data[i+200+5] = 136 + rnd;
 				img.data[i+200+6] = 77+rnd ;
-				img.data[i+200+7] = 255;
+				img.data[i+200+7] = 250;
 			}
 		}
 		
@@ -163,20 +370,20 @@ av.canvas = {
 				img.data[i] = 114+rnd; 
 				img.data[i+1] = 136 + rnd;
 				img.data[i+2] = 77+rnd ;
-				img.data[i+3] = 255;
+				img.data[i+3] = 250;
 				img.data[i+4] = 114+rnd; 
 				img.data[i+5] = 136 + rnd;
 				img.data[i+6] = 77+rnd ;
-				img.data[i+7] = 255;
+				img.data[i+7] = 250;
 				
 				img.data[i+200] = 114+rnd; 
 				img.data[i+200+1] = 136 + rnd;
 				img.data[i+200+2] = 77+rnd ;
-				img.data[i+200+3] = 255;
+				img.data[i+200+3] = 250;
 				img.data[i+200+4] = 114+rnd; 
 				img.data[i+200+5] = 136 + rnd;
 				img.data[i+200+6] = 77+rnd ;
-				img.data[i+200+7] = 255;
+				img.data[i+200+7] = 250;
 			}
 		}
 		
@@ -225,14 +432,14 @@ av.input = {
 	init: function(elem) {
 		var $this = this ;
 		this.elem = elem ;
-		document.addEventListener('keydown', function(evt) {
-			
+		
+		document.addEventListener('keydown', function(evt) {	
 			switch (evt.keyCode) {
-				case 38:   // 83
+				case 38:   
 					$this.v+=0.01;
 					if ($this.v > $this.maxV ) { $this.v = $this.maxV } 
 				break;
-				case 40:    // 88
+				case 40:    
 					$this.v-=0.01;
 					if ($this.v < $this.minV ) { $this.v = $this.minV } 
 				break;
@@ -256,44 +463,48 @@ av.input = {
 			$this.setMeter();
 		});
 		
-		elem.addEventListener("touchstart", function(event){
-			event.preventDefault();
+		document.addEventListener("touchstart", function(event){
+		
 			var touches = [];
 			for(var i=0; i< event.targetTouches.length; i++) {
-				touches[i] = {} ;
-				touches[i].x = event.targetTouches[i].pageX ;
-				touches[i].y = event.targetTouches[i].pageY  ;
+				touches[i] = {
+					x: event.targetTouches[i].pageX,
+					y: event.targetTouches[i].pageY 
+				} ;
 			}
 			$this.procStart(touches) ;
 		});
 		
-		elem.addEventListener("touchmove", function(event){
+		document.addEventListener("touchmove", function(event){
 			event.preventDefault();
 			var touches = [];
 			for(var i=0; i< event.targetTouches.length; i++) {
-				touches[i] = {} ;
-				touches[i].x = event.targetTouches[i].pageX ;
-				touches[i].y = event.targetTouches[i].pageY  ;
+				touches[i] = {
+					x: event.targetTouches[i].pageX,
+					y: event.targetTouches[i].pageY 
+				} ;
 			}
 			$this.procMove(touches) ;
 		},false);
 		
-		elem.addEventListener("touchend", function(event){
-			event.preventDefault();
+		document.addEventListener("touchend", function(event){
+		
 			$this.procEnd() ;
 		});
 		
-		elem.addEventListener("mousedown", function(event){
+		document.addEventListener("mousedown", function(event){
 			event.preventDefault();
-			$this.mouse = true;			
+			$this.mouse = true;	
+			var touches = [ { x: event.clientX, y: event.clientY }];
+			$this.procStart(touches) ;			
 		});
 		
-		elem.addEventListener("mouseup", function(event){
+		document.addEventListener("mouseup", function(event){
 			$this.mouse = false;
 			$this.procEnd();
 		});
 		
-		elem.addEventListener("mousemove", function(event){
+		document.addEventListener("mousemove", function(event){
 			event.preventDefault();
 			if (!$this.mouse) return false;
 			var touches = [ { x: event.clientX, y: event.clientY }];
@@ -304,16 +515,12 @@ av.input = {
 		document.addEventListener('click', function(e) { 
 			var val = e.target.attributes.getNamedItem("data-btn") ;
 			val = val && val.value ;
-			console.log(val) ;
+		
 			switch(val) {
 				case "start":
 					av.app.level = parseInt(e.target.attributes.getNamedItem("data-level").value) ;
-					if (av.app.level >=0 && av.app.level <=2) {
+					if (av.app.level >=0 && av.app.level <=3) {
 						av.app.ctrl("START");
-					}
-					else {
-						av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert-soon")) ;
-						av.util.cAdd(document.getElementById("alert"),"alert-show") ;
 					}
 				break;
 				case "tut":
@@ -338,56 +545,59 @@ av.input = {
 		var $this = this ;
 		var rect = this.elem.getBoundingClientRect();
 		for(var i=0; i< touches.length; i++) {
-				$this.x1[i] = touches[i].x - rect.left;
-				$this.y1[i] = touches[i].y - rect.top ;
+				this.x1[i] = touches[i].x - rect.left;
+				this.y1[i] = touches[i].y - rect.top ;
 			}
 	},
 	procEnd: function() {
-		var $this = this ;
-		for(var i=0; i< $this.x1.length; i++) {
-				var x = $this.x1[i];
-				var y = $this.y1[i]  ;
+	
+		var rect = this.elem.getBoundingClientRect();
+		for(var i=0; i< this.x1.length; i++) {
+				var x = this.x1[i] ; 
+				var y = this.y1[i] ; 
 				var cp = av.cockpit ;
 				var r2 = (cp.r-12)*(cp.r-12) ;
 				if (Math.pow(x-(cp.start+cp.meters.length*cp.space),2) + Math.pow(y-cp.y,2) < r2) {
-					if (av.app.paused) {
-						av.app.ctrl("CONTINUE") ;
-					}
-					else {
-						av.app.ctrl("PAUSE") ;
-					}
+					
+					av.app.ctrl("PAUSE") ;
 				}
 			}
+			this.x1 = [];
+			this.y1 = [] ;
+			
 	},
 	procMove: function(touches) {
-		var $this = this ;
-		var rect = this.elem.getBoundingClientRect();
 	
+		var rect = this.elem.getBoundingClientRect();
 		for(var i=0; i< touches.length; i++) {
-			var dx = (touches[i].x - rect.left) - $this.x1[i];
-			var dy = $this.y1[i] - (touches[i].y - rect.top)   ;
-			
-			if ( (touches[i].y - rect.top) > 100 ) { 
-				if (Math.abs(dy) > Math.abs(dx+dx)) {
-					var yVal = $this.v ; 
-					yVal+= dy / 500 ;
-					if (yVal > $this.maxV ) { yVal = $this.maxV } 
-					if (yVal < $this.minV ) { yVal = $this.minV } 
-					$this.v= yVal ;
-				}
+		
+			if (touches.length == this.y1.length) {
+				var dx = (touches[i].x - rect.left) - this.x1[i];
+				var dy = this.y1[i] - (touches[i].y - rect.top)   ;
 				
-				if (Math.abs(dx) > Math.abs(dy+dy)) {
-					var xVal = $this.a ;
-					xVal+= dx / 500;
-					if (xVal < -av.c.PI_8 ) { xVal = -av.c.PI_8 } 
-					if (xVal > av.c.PI_8 ) { xVal = av.c.PI_8 } 
-					$this.a= xVal ;
+				if ( (touches[i].y - rect.top) > 100 ) { 
+					if (Math.abs(dy) > Math.abs(dx+dx)) {
+						var yVal = this.v ; 
+						yVal+= dy / 500 ;
+						if (yVal > this.maxV ) { yVal = this.maxV } 
+						if (yVal < this.minV ) { yVal = this.minV } 
+						this.v= yVal ;
+					}
+					
+					if (Math.abs(dx) > Math.abs(dy+dy)) {
+						var xVal = this.a ;
+						xVal+= dx / 500;
+						if (xVal < -av.c.PI_8 ) { xVal = -av.c.PI_8 } 
+						if (xVal > av.c.PI_8 ) { xVal = av.c.PI_8 } 
+						this.a= xVal ;
+					}
 				}
 			}
-			$this.x1[i] = touches[i].x - rect.left;
-			$this.y1[i] = touches[i].y - rect.top ;
-			$this.setMeter();
+			this.x1[i] = touches[i].x - rect.left;
+			this.y1[i] = touches[i].y - rect.top ;
+			this.setMeter();
 		}	
+		
 	},
 	setMeter: function() {
 		av.cockpit.values[0] = this.v * 11.7 + av.c.PIx0_75;
@@ -407,32 +617,39 @@ av.obj = function(arg) {
 	this.dir = (arg && arg.dir) || 0;
 	this.acc = { v: 0, a: 0 };
 	this.sp = (arg && arg.sp) || { v: 0, a: 0 }  ;
+	
 	this.move = function(arg) {
 		var fTot = { v:0, a:0 };
 		if (arg && arg.drv) {
 			fTot = { v: arg.drv.v , a: this.dir };
-			//var rev = 1;
+		
 			var diff = this.sp.a - this.dir - av.c.PI_2 ;
 			var drv = this.sp.v ;
 			if ( this instanceof av.ship && this.sp.v < av.input.v / 6 ) { 
 				drv = av.input.v / 4; 
-				//console.log("*");
-			}
 				
+			}
+			
 			this.dir+= Math.sin(diff) * drv * arg.drv.a / -2  ;
-			if (this.dir > Math.PI  ) this.dir= this.dir - av.c.PIx2;
-			if (this.dir < -Math.PI ) this.dir= this.dir + av.c.PIx2;
+			if (this.dir > Math.PI  ) this.dir-= av.c.PIx2;
+			if (this.dir < -Math.PI ) this.dir+= av.c.PIx2;
 		}
 		var dT = arg.dT; 
 		this.dT = dT;
 		var res = arg.res;
-		var f = arg.f;
-		
-		f.push ( { v: this.sp.v * res, a: this.sp.a - Math.PI });	
-		
-		for ( var i=0; i < f.length; i++ ) {
-			fTot = av.util.addV(fTot,f[i]) ;
+		//var f = arg.f;
+		if (arg.w) {
+			fTot = av.util.addV(fTot,arg.w) ;
 		}
+		if (res) {
+			fTot = av.util.addV(fTot,{ v: -this.sp.v * res, a: this.sp.a  }) ;
+		}
+		//f.push ( { v: -this.sp.v * res, a: this.sp.a  });	
+		
+		// for ( var i=0; i < f.length; i++ ) {
+			// var force = { v:f[i].v, a: f[i].a } ;
+			// fTot = av.util.addV(fTot,force) ;
+		// }
 		this.acc = 	{ v: fTot.v / this.m, a: fTot.a };	
 		if (!this.blocked) {
 			this.sp	= av.util.addV( this.sp , { v: this.acc.v * dT, a: this.acc.a } )  ;	
@@ -440,10 +657,12 @@ av.obj = function(arg) {
 		else {
 			this.sp.v = 0;
 		}
+		
+		
 		this.p1 = { v: this.p.v, a: this.p.a } ;
 		
-		this.p = av.util.addV( this.p, { v: this.sp.v * dT, a: this.sp.a } );	
-		
+		this.p = av.util.addV( this.p1, { v: this.sp.v * dT, a: this.sp.a } );	
+					
 		this.x = this.p.v * Math.cos(this.p.a)  ;
 		this.y = this.p.v * Math.sin(this.p.a)  ;
 		this.custMove();
@@ -459,12 +678,17 @@ av.obj = function(arg) {
 	};
 	this.drawShape = function() { } ;
 	this.chkSand = function(x,y) {
-		var result = false;
 		var dest = ( (x | 0) + (y | 0) * av.background.img.width)*4 ;
-		if ( av.background.img.data[dest] == av.app.sandVal[0] && av.background.img.data[dest+1] == av.app.sandVal[1] && av.background.img.data[dest+2] == av.app.sandVal[2] ) {
-			result = true;
+		if (x<0 || y <100 || dest > av.background.img.data.length-3 ) return false;
+		
+		var result = true;
+		if ( (av.background.img.data[dest] == 0 && av.background.img.data[dest+1] == 0 && av.background.img.data[dest+2] == 0) 
+				|| (av.background.img.data[dest+2]>av.background.img.data[dest] && av.background.img.data[dest+2]>=av.background.img.data[dest+1]) ) {
+			result = false;
 		}
+		
 		return result;
+		
 	}
 }
 
@@ -476,12 +700,13 @@ av.ship = function(arg) {
 	this.xOff = 0;
 	this.yOff = -10;
 	this.drawShape = function(ctx) {
+		ctx.lineCap = 'round';
 		ctx.lineWidth = 2;
-		ctx.strokeStyle = '#eee' ;
-		ctx.fillStyle = "#ccc" ;
+		ctx.strokeStyle = '#999999' ;
+		ctx.fillStyle = "#917c6f" ;
 		ctx.lineJoin = 'round';
 						
-		ctx.shadowColor = '#023';
+		ctx.shadowColor = '#032';
 		ctx.shadowBlur = 3;
 		ctx.shadowOffsetX = 3;
 		ctx.shadowOffsetY = 3;
@@ -491,28 +716,63 @@ av.ship = function(arg) {
 		ctx.arc(this.xOff-75,this.yOff+15,90,5.73,0.2617993877991494,false);
 		ctx.closePath();
 		ctx.fill();
-					
-			ctx.shadowBlur = 0;
-			ctx.shadowOffsetX = 0;
-			ctx.shadowOffsetY = 0;
-			ctx.beginPath();
-			ctx.moveTo(-5,-5);
-			ctx.lineTo(+5,+5);
-			ctx.moveTo(-5,+5);
-			ctx.lineTo(+5,-5);
-			
-			ctx.moveTo(-2,-2-30);
-			ctx.lineTo(+2,+2-30);
-			ctx.moveTo(-2,+2-30);
-			ctx.lineTo(+2,-2-30);
-			
-			ctx.moveTo(-2,-2+25);
-			ctx.lineTo(+2,+2+25);
-			ctx.moveTo(-2,+2+25);
-			ctx.lineTo(+2,-2+25);
-			ctx.stroke();
-						
-			this.msg(ctx);
+		ctx.shadowBlur = 0;
+		ctx.shadowOffsetX = 0;
+		ctx.shadowOffsetY = 0;
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = '#6c5d53';
+		ctx.lineWidth = 1;
+		ctx.moveTo(this.xOff+3,this.yOff+37);
+		ctx.lineTo(this.xOff+3,this.yOff-27);
+		ctx.moveTo(this.xOff-3,this.yOff+37);
+		ctx.lineTo(this.xOff-3,this.yOff-27);
+		ctx.moveTo(this.xOff+9,this.yOff+37);
+		ctx.lineTo(this.xOff+9,this.yOff-14);
+		ctx.moveTo(this.xOff-9,this.yOff+37);
+		ctx.lineTo(this.xOff-9,this.yOff-14);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = "#000044" ;
+		ctx.lineWidth = 2;
+		ctx.moveTo(-8,-12);
+		
+		ctx.lineTo(8,-12)
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.fillStyle = "#999999" ;
+		av.util.roundRect(ctx, -3, -34, 6, 6, 2, true , false);
+		
+		ctx.shadowColor = '#321';
+		ctx.shadowBlur = 3;
+		ctx.shadowOffsetX = 3;
+		ctx.shadowOffsetY = 3;
+		ctx.beginPath();
+		ctx.fillStyle = "#999999" ;
+		av.util.roundRect(ctx, -9, -12, 18, 28, 2, true , false);
+		ctx.fillStyle = "#bbbbbb" ;
+		av.util.roundRect(ctx, -9, 6, 18, 11, 2, true , false);
+		
+		ctx.beginPath();
+		ctx.lineWidth = 3;
+		ctx.strokeStyle = "#dddddd" ;
+		ctx.moveTo(0,15);
+		ctx.lineTo(-4,18);
+		ctx.moveTo(0,15);
+		ctx.lineTo( 4,18);
+		ctx.stroke();
+		
+		ctx.shadowBlur = 1;
+		ctx.shadowOffsetX = 1;
+		ctx.shadowOffsetY = 1;
+		ctx.beginPath();
+		ctx.fillStyle = "#999999" ;
+		av.util.roundRect(ctx, -3, -34, 6, 6, 2, true , false);
+								
+		this.msg(ctx);
 	}	
 	this.custMove = function() {
 		av.cockpit.values[2] = this.sp.v * 40 + av.c.PIx0_75;
@@ -596,6 +856,7 @@ av.wrc = function(arg) {
 	this.health = 999;
 	this.saveT = 3000;
 	this.m = 100;
+	this.attack = false;
 	this.custMove = function() { 
 		if (this.chkSand(this.x,this.y)) {
 			this.blocked = true ;
@@ -619,6 +880,14 @@ av.wrc = function(arg) {
 				}
 			}
 		}
+		if (this.attack) {
+			this.health-=this.dT;
+			if (this.health < 0 ) { 
+					this.health = 0;
+					this.vit = 0;
+					av.app.wrcLeft--;
+			}
+		}
 		if (this.rescure)  {
 			this.saveT-=this.dT;
 			if (this.saveT < 0 )  { 
@@ -636,7 +905,9 @@ av.wrc = function(arg) {
 		if (!av.app.wrcLeft) {
 			av.app.ctrl("WRC0");
 		}
+		
 		var diff = av.util.subV(this.p,av.app.boat.p);
+		
 		this.textDir = diff.a;
 		this.dist = diff.v;
 		if (this.dist < 100) {
@@ -644,38 +915,41 @@ av.wrc = function(arg) {
 		}
 	};
 	this.drawShape = function(ctx) { 
-		ctx.shadowColor = '#023';
+		ctx.shadowColor = '#032';
 		ctx.shadowBlur = 3;
 		ctx.shadowOffsetX = 3;
 		ctx.shadowOffsetY = 3;
-		
+		ctx.lineCap = 'round';
 		ctx.lineJoin = 'round';		
 		ctx.beginPath();
-		ctx.lineWidth = 3;
+		ctx.lineWidth = 2;
 		ctx.strokeStyle = '#FFDDAA' ;		
-		ctx.moveTo(-4,0);
-		ctx.lineTo(-9,3);
-		ctx.lineTo(-10,8);
-		ctx.moveTo(4,0);
-		ctx.lineTo(9,3);
-		ctx.lineTo(10,8);
+				
+		ctx.moveTo(-3,0);
+		ctx.lineTo(-7,3);
+		ctx.lineTo(-8,6);
+		ctx.moveTo(3,0);
+		ctx.lineTo(7,3);
+		ctx.lineTo(8,6);
 		ctx.stroke();
 		
 		ctx.beginPath();
-		ctx.fillStyle = "yellow" ;
-		av.util.roundRect(ctx, -6, -4, 12, 8, 2, true , false);
+		ctx.strokeStyle = "yellow" ;
+		ctx.moveTo(4,2);
+		ctx.lineTo(-4,2);
+		ctx.stroke();
 		ctx.fillStyle = "orange" ;
-		av.util.roundRect(ctx, -8, -5, 16, 7, 2, true , false);
+		av.util.roundRect(ctx, -6, -4, 12, 5, 2, true , false);
 		
 		ctx.shadowBlur = 0;
 		ctx.shadowOffsetX = 0;
 		ctx.shadowOffsetY = 0;
 		ctx.beginPath();
-		ctx.arc(0,0,3,0,av.c.PIx2) ;
+		ctx.arc(0,0,2.5,0,av.c.PIx2) ;
 		ctx.fillStyle = "brown" ;
 		ctx.fill();
 		
-		if (this.dist < 100 ) {
+		if (this.dist < 100 || this.attack) {
 			var x = 50*Math.cos(this.textDir) ;
 			var y = 50*Math.sin(this.textDir) ;
 			ctx.font = '8pt Comic Sans MS';
@@ -694,27 +968,168 @@ av.wrc = function(arg) {
 			ctx.rect(x-25,y-4,45*this.health/999,3);
 			ctx.fill();
 			
-			ctx.fillStyle = "#000";
-			ctx.fillText("save time",x,y+7);
-			ctx.beginPath();
-			ctx.fillStyle = "#ccc";
-			ctx.rect(x-25,y+17,50,5);
-			ctx.fill();
-			ctx.beginPath();
-			ctx.fillStyle = "red";
-			ctx.rect(x-25,y+18,45*this.saveT/3000,3);
-			ctx.fill();
+			if (!this.attack) {
+				ctx.fillStyle = "#000";
+				ctx.fillText("save time",x,y+7);
+				ctx.beginPath();
+				ctx.fillStyle = "#ccc";
+				ctx.rect(x-25,y+17,50,5);
+				ctx.fill();
+				ctx.beginPath();
+				ctx.fillStyle = "red";
+				ctx.rect(x-25,y+18,45*this.saveT/3000,3);
+				ctx.fill();
+			}
 		}
 	} 
 }
 
-// ---------------------------------- COLLOSION DETECT
+// ---------------------------------- SHARK OBJ
+av.shark = function(arg) {
+	av.obj.call(this,arg);
+	this.baseSp = this.sp.v ;
+	this.m = 200;
+	this.target = { v: 500, a: 3.14/4 } ;
+	this.op = "seek" ;
+	this.twst = 0;
+	this.a1 = 0; 
+	this.custMove = function() { 
+		
+		if ( this.op != "esc" 
+			&& this.chkSand(this.x + 25*Math.cos( this.sp.a ),this.y + 25*Math.sin( this.sp.a )) ) {
+			this.target = av.util.addV(this.p,{v:-40, a: this.sp.a }) ;
+			this.op = "esc";
+		
+		}
+		if (this.vict && this.vict.isRescured ) {
+			this.vict = null;
+			this.op = "seek";
+			
+		}
+		switch (this.op) {
+			case "esc":
+				var dir = av.util.subV(this.target,this.p);
+				var diff = this.sp.a - dir.a ;
+				if (diff >  Math.PI ) { diff-=av.c.PIx2 } 
+				if (diff < -Math.PI ) { diff+=av.c.PIx2 } 
+				if (diff < -0.01 ) {
+					this.sp.a += 0.1 ;
+					this.twst += 0.1;
+				}
+				if (diff > 0.01 ) {
+					this.sp.a -= 0.1 ;
+					this.twst -= 0.1;
+				}
+				this.dir = this.sp.a
+				
+				if (dir.v < 5) {
+					this.op="seek";
+					
+				}
+			break;
+			case "seek":
+				if (this.x>1050 || this.x< -50 || this.y > av.canvas.h+50 || this.y < 50 ) {
+					var diff = av.util.subV({v:450+150*Math.random(),a:av.c.PI_4},this.p);
+					this.sp = { v : this.baseSp, a: diff.a } ;
+					this.dir = diff.a ;
+				}
+				var min = 500;
+				for (var i= 0; i< av.coll.items.length; i++) {
+					var dist = av.util.subV(av.coll.items[i].p,this.p) ;
+					if ( dist.v < 300 && av.coll.items[i].health > 0 && av.coll.items[i].vit > 0 ) {
+						if (dist.v < min ) {
+							this.vict = av.coll.items[i] ;
+							min = dist.v ;
+						}
+					}
+				}
+				if (min < 500) {
+					var dir = av.util.subV(this.vict.p,this.p);
+					this.target = av.util.addV(this.vict.p, { v: 50, a: dir.a + av.c.PI_2 })  ;
+					this.op = "follow" ;
+				
+				}
+			break;
+			case "follow":
+				var dir = av.util.subV(this.target,this.p);
+				var diff = this.sp.a - dir.a ;
+				if (diff >  Math.PI ) { diff-=av.c.PIx2 } 
+				if (diff < -Math.PI ) { diff+=av.c.PIx2 } 
+				if (diff < -0.01 ) {
+					this.sp.a += 0.02 ;
+					this.twst += 0.1;
+				}
+				if (diff > 0.01 ) {
+					this.sp.a -= 0.02 ;
+					this.twst -= 0.1;
+				}
+				this.dir = this.sp.a
+				if (dir.v < 3) {
+					this.op = "circ" ;
+					this.sp.v = this.baseSp + 0.01;
+					
+				}
+			break;
+			case "circ":
+				if (!this.vict || this.vict.health < 1 ) {
+					this.op = "seek";
+					var diff = av.util.subV({v:500,a:av.c.PI_4},this.p);
+					this.sp = { v : this.baseSp, a: diff.a } ;
+					this.dir = diff.a ;
+					
+					break;
+				}
+				var dir = av.util.subV(this.vict.p,this.p);
+				this.sp.a = dir.a + av.c.PI_2 - 0.075 ;
+				this.dir = this.sp.a ;
+				this.twst -= 0.5;
+				if (dir.v < 11) {
+					this.sp.v = this.baseSp-0.02;
+			
+					this.vict.attack = true;
+				}
+			break;
+		}
+		if (this.twst > 4) this.twst = 4;
+		if (this.twst < -4) this.twst = -4;
+		
+		if (this.twst > 0.03) this.twst-=0.025 ;
+		if (this.twst < -0.03) this.twst+=0.025 ;
+		
+	};
+	this.drawShape = function(ctx) { 		
+		
+	ctx.strokeStyle = '#306060';
+	ctx.fillStyle = '#447777';
+	ctx.beginPath();
+	ctx.moveTo(-3, 14);
+	ctx.bezierCurveTo(-4, 14, -2, 13, -2, 12);
+	ctx.bezierCurveTo(-2, 10, -2, 9, -2, 7);
+	ctx.bezierCurveTo(-3, 6, -5, 7, -7, 6);
+	ctx.bezierCurveTo(-9, 5, -3, 3, -2, 2);
+	ctx.bezierCurveTo(-2, 1, -2, -4, -0, -5);
+	ctx.bezierCurveTo(1, -4, 1, 1, 2, 2);
+	ctx.bezierCurveTo(2, 3, 8, 5, 6, 6);
+	ctx.bezierCurveTo(5, 6, 2, 6, 2, 7);
+	ctx.bezierCurveTo(1, 9, 1, 10, 1, 12);
+	ctx.bezierCurveTo(1, 13, 4, 13, 3, 14);
+	ctx.bezierCurveTo(2, 15, 1, 15, 1, 15);
+	ctx.bezierCurveTo(0, 16, 0, 22, -0+this.twst, 25);
+	ctx.bezierCurveTo(-1, 21, -1, 16, -1, 15);
+	ctx.bezierCurveTo(-1, 15, -2, 15, -3, 14);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+	} 
+}
+
+// ---------------------------------- COLLOSION DETECTION
 av.coll = {
 	items: [],
 	detect: function() {
 		var ctrl1 = av.util.addV(av.app.boat.p, { v: 40, a: av.app.boat.dir }  ) ; 
 		var ctrl2 = av.util.addV(av.app.boat.p, { v: -30, a: av.app.boat.dir }  ) ; 
-		for (i=0; i<this.items.length; i++) {
+		for ( var i=0; i<this.items.length; i++) {
 			var dist1 = av.util.subV(ctrl1 , this.items[i].p ).v ;
 			var dist2 = av.util.subV(ctrl2 , this.items[i].p ).v ;
 			if ( (dist1 + dist2) < 75 ) {
@@ -726,7 +1141,7 @@ av.coll = {
 		}
 		var ctrl1 = av.util.addV(av.app.boat.p, { v: 45, a: av.app.boat.dir }  ) ; 
 		var ctrl2 = av.util.addV(av.app.boat.p, { v: -35, a: av.app.boat.dir }  ) ; 
-		for (i=0; i<this.items.length; i++) {
+		for (var i=0; i<this.items.length; i++) {
 			var dist1 = av.util.subV(ctrl1 , this.items[i].p ).v ;
 			var dist2 = av.util.subV(ctrl2 , this.items[i].p ).v ;
 			if ( (dist1 + dist2) < 101 ) {
@@ -736,6 +1151,12 @@ av.coll = {
 				this.items[i].rescure = false;
 			}
 		}
+	},
+	clean: function() {
+		for ( var i = 0; i < this.items.length; i++ ) {
+			delete this.items[i];
+		}
+		this.items = [];
 	}
 }
 
@@ -747,13 +1168,13 @@ av.cockpit = {
 	y: 45,
 	meters: [1,0,1,1,0,1],
 	title: ["Throttle","Steering","Speed","Wind speed","Wind direction","Time left"],
-	values: [av.c.PIx0_75,av.c.PIx1_5] ,
+	values: [av.c.PIx0_75,av.c.PIx1_5,0,0,0,0] ,
 	draw: function(arg) {
 		var ctx = arg.ctx ;
 		var elem = arg.elem ;
 		ctx.save();
 		ctx.lineCap = 'round';
-		ctx.strokeStyle = "#76a698" ;
+		ctx.strokeStyle = "#769698" ;
 		ctx.lineWidth = 4;		
 		
 		for (var i=0; i< this.meters.length; i++) {
@@ -773,7 +1194,7 @@ av.cockpit = {
 		}
 		if (this.values[0] < av.c.PIx0_75-0.01) {
 			ctx.font = 'bold 8pt Comic Sans MS';
-			ctx.fillStyle = "#a20";
+			ctx.fillStyle = "#a02";
 			ctx.textBaseline = 'middle';
 			ctx.textAlign = 'center';
 			ctx.fillText("Rev",this.start,this.y+22);
@@ -796,10 +1217,13 @@ av.background = {
 		var result = 0;
 		xp = xp | 0;
 		yp = yp | 0;
+				
 		for (var y=0; y < h ; y++) {
 			for (var x=0; x < w ; x++) {
 				var idx = (xp+x  + (y+yp) * av.background.img.width)*4 ;
-				result+=av.background.img.data[idx] + av.background.img.data[idx+1] + av.background.img.data[idx+2] ;
+				if (idx < av.background.img.data.length-2) {
+					result+=av.background.img.data[idx] + av.background.img.data[idx+1] + av.background.img.data[idx+2] ;
+				}
 			}
 		}
 		return result;
@@ -808,14 +1232,14 @@ av.background = {
 		// background
 		var ctx = av.canvas.bgCtx ;
 		ctx.save();
-		ctx.fillStyle = "#99cccc";
+		ctx.fillStyle = "#99cccf";
 		ctx.beginPath();
 		ctx.rect(0,0,998,100);
 		ctx.fill();
 		// METERS
 		var cp = av.cockpit ;
 		
-		ctx.strokeStyle = "#336666" ;
+		ctx.strokeStyle = "#336667" ;
 		ctx.lineWidth = 3;		
 		ctx.fillStyle = "#76a698";
 		ctx.font = '10pt Comic Sans MS';
@@ -862,7 +1286,7 @@ av.background = {
 		ctx.lineWidth = 3;		
 		
 		ctx.beginPath();
-		ctx.fillStyle = "#336666";
+		ctx.fillStyle = "#336667";
 		ctx.moveTo( cp.start+cp.meters.length*cp.space +5,cp.y -5);
 		ctx.lineTo( cp.start+cp.meters.length*cp.space +5,cp.y +5);
 		ctx.lineTo( cp.start+cp.meters.length*cp.space +12,cp.y +0);
@@ -874,7 +1298,7 @@ av.background = {
 		
 		if (av.app.levels[level].island[0]) {	
 			// 1. sziget	
-			ctx.fillStyle = 'rgb(153, 204, 204)';
+			ctx.fillStyle = 'rgb(153, 204, 214)';
 			ctx.beginPath();
 			ctx.moveTo(365, 843);
 			ctx.bezierCurveTo(365, 876, 341, 902, 313, 917);
@@ -919,7 +1343,7 @@ av.background = {
 		
 		if (av.app.levels[level].island[1]) {	
 		// #path4462  2.sziget
-			ctx.fillStyle = 'rgb(153, 204, 204)';
+			ctx.fillStyle = 'rgb(153, 204, 214)';
 			ctx.beginPath();
 			ctx.moveTo(862, 920);
 			ctx.bezierCurveTo(862, 948, 780, 941, 753, 953);
@@ -960,7 +1384,7 @@ av.background = {
 	
 		if (av.app.levels[level].island[2]) {	
 		// #path4464  3.sziget
-			ctx.fillStyle = 'rgb(153, 204, 204)';
+			ctx.fillStyle = 'rgb(153, 204, 214)';
 			ctx.beginPath();
 			ctx.moveTo(854, 780);
 			ctx.bezierCurveTo(849, 812, 835, 798, 817, 790);
@@ -1058,7 +1482,7 @@ av.background = {
 		var d=pos.d || 0;
 		var ctx = av.canvas.bgCtx ;
 		ctx.save();
-		ctx.shadowColor = '#023';
+		ctx.shadowColor = '#032';
 		ctx.shadowBlur = 3;
 		ctx.shadowOffsetX = 3;
 		ctx.shadowOffsetY = 3;
@@ -1092,13 +1516,15 @@ av.app =  {
 	obj: [],
 	wind: { v: 0.015, a: Math.PI },  // max 0.05
 	levels: [
-		{ title: "Level 1", wrc: 2, island: [1,0,0], wind: { v: 0.002, a: Math.PI } },
-		{ title: "Level 2", wrc: 4, island: [1,1,0], wind: { v: 0.007, a: 1.76 } },
-		{ title: "Level 3", wrc: 6, island: [1,1,1], wind: { v: 0.015, a: -1.3 } }
+		{ wrc: 2, shrk: 1, island: [1,0,0], wind: { v: 0.002, a: Math.PI } },
+		{ wrc: 3, shrk: 1, island: [1,1,0], wind: { v: 0.007, a: 1.76 } },
+		{ wrc: 4, shrk: 1, island: [1,1,1], wind: { v: 0.015, a: -1.3 } },
+		{ wrc: 4, shrk: 4, island: [1,1,1], wind: { v: 0.015, a: -.8 } }
 	],
 	level: 0,
+	earn: 0,
 	start: function() {
-		av.util.fixConsole(false);
+		console.log("start");
 		
 		var detect = av.detect() ;
 		if (!detect.canvas) {
@@ -1109,9 +1535,13 @@ av.app =  {
 			av.util.cRem(document.getElementById("rotScr"),"hide") ;	
 			return false;
 		}
+		if ( window.innerWidth < 1000 ) {
+			av.util.cRem(document.getElementById("smlScr"),"hide") ;	
+			return false;
+		}
 		av.util.cRem(document.getElementById("container"),"hide") ;	
 		
-		console.log("ready");
+		
 		
 		av.startPage(document.getElementById("start-canvas").getContext("2d"));
 		
@@ -1156,18 +1586,18 @@ av.app =  {
 					ctx.ctx.beginPath() ;
 					ctx.ctx.rect(0,100,ctx.elem.width,ctx.elem.height-100);
 					ctx.ctx.clip();
-										
+					//var w = { v: $this.wind.v, a: $this.wind.a };			
 					for (var i=0; i < $this.obj.length; i++) {
 						var arg = { dT: dT,
 									res: 0,
-									f:[],
+									w: { v: 0 , a: 0 },
 									drv: { v: 0 , a: 0 }
 							};
 						if ($this.obj[i] instanceof av.wrc) {
-							arg = { dT: dT,
-									res: 5,
-									f:[{v:av.app.wind.v/2, a:av.app.wind.a}],
-									drv: { v: 0 , a: 0 }
+							var arg = { dT: dT,
+									res: 2,
+									w: { v: $this.wind.v/2, a: $this.wind.a },
+									drv: null 
 							};
 						}
 						$this.obj[i].move(arg);
@@ -1176,7 +1606,7 @@ av.app =  {
 					
 					var arg = { dT: dT,
 								res: 3,
-								f:[av.app.wind],
+								w: { v: $this.wind.v, a: $this.wind.a },
 								drv: { v: av.input.v , a: av.input.a }
 					};
 					$this.boat.move(arg);
@@ -1189,16 +1619,16 @@ av.app =  {
 				var i= $this.obj.length - 1 ;  
 				do { 
 					if( $this.obj[i] && $this.obj[i].vit<1 ) { 
-						var o = $this.obj[i] ;
+						delete $this.obj[i] ;
 						$this.obj.splice(i,1) ; 
-						delete o;
+						// delete o;
 					} 
 					else { 
 						i--; 
 					}  
 				} while(i>=0) ;
 				
-				av.cockpit.values[3] = $this.wind.v * 33 + av.c.PIx0_75;
+				av.cockpit.values[3] = $this.wind.v * 100 + av.c.PIx0_75;
 				av.cockpit.values[4] = $this.wind.a    ;
 			}
 			window.requestAnimFrame(animloop) ; 
@@ -1219,7 +1649,7 @@ av.app =  {
 				av.background.draw(this.level);
 				av.input.v = 0;
 				av.input.a = 0;
-				av.cockpit.values = [av.c.PIx0_75,av.c.PIx1_5] ;
+				av.cockpit.values = [av.c.PIx0_75,av.c.PIx1_5,0,0,0,0] ;
 				this.timer = 120;
 				this.runT = true;
 				this.boat.p = { v: 200, a: av.c.PI_4 } ;
@@ -1237,14 +1667,24 @@ av.app =  {
 				av.util.cAdd(document.getElementById("tut"),"hide") ;
 				av.util.cAdd(document.getElementById("ftr"),"hide") ;	
 				
-				this.wind = this.levels[this.level].wind ;
+				var w = this.levels[this.level].wind ;
+				this.wind = { v:w.v, a:w.a };
 				
-				av.coll.items = [] ;
+				//av.coll.items = [] ;
+				av.coll.clean();
 				this.objCleanUp();
 				
+				
+				for (var i=0; i < this.levels[this.level].shrk; i++ ) {
+					var o = new av.shark( { 	p:	{v:-100+1200*Math.random(), a: 0}, sp: { v : 0.025+Math.random()*0.01, a: 0 } }  ) ;
+					av.app.obj.push( o ) ;
+					var diff = av.util.subV({v:500,a:av.c.PI_4},o.p);
+					o.sp.a = diff.a  ;
+					o.dir = diff.a ;
+				}
+				
 				for(var i=0; i< this.levels[this.level].wrc ; i++) {
-					var o;
-					o = new av.wrc( { 	p:	this.getWrcPos(),	vit: 100 , dir: av.c.PIx2*Math.random() } ) ;
+					var o = new av.wrc( { 	p:	this.getWrcPos(),	vit: 100 , dir: av.c.PIx2*Math.random() } ) ;
 					av.app.obj.push( o ) ;
 					av.coll.items.push( o );
 				}
@@ -1267,27 +1707,32 @@ av.app =  {
 			case "WRECKED":
 				this.runT = false;
 				av.util.cAdd(document.getElementById("game"),"opa") ;	
-				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert-wrecked"),this.chkResult()) ;
+				var o = this.chkResult();
+				o.reason = "You have wrecked your boat!";
+				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert"),o) ;
 				av.util.cAdd(document.getElementById("alert"),"alert-show") ;
 				this.paused = true ;
 				break;
 			case "END-TIME":
 				this.runT = false;
 				av.util.cAdd(document.getElementById("game"),"opa") ;	
-				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert-end-time"),this.chkResult()) ;
+				var o = this.chkResult();
+				o.reason = "Time is up!";
+				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert"),o) ;
 				av.util.cAdd(document.getElementById("alert"),"alert-show") ;
 				this.paused = true ;
 				break;
 			case "WRC0":
 				this.runT = false;
 				av.util.cAdd(document.getElementById("game"),"opa") ;	
-				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert-end"),this.chkResult()) ;
+				av.util.tmpl(document.getElementById("alert-content"),document.getElementById("tmpl-alert"),this.chkResult()) ;
 				av.util.cAdd(document.getElementById("alert"),"alert-show") ;
 				this.paused = true ;
 				break;
 		}
 	},
 	objCleanUp: function() {
+		
 		for (var i=0; i < this.obj.length; i++) {
 			delete this.obj[i];
 		}
@@ -1301,15 +1746,15 @@ av.app =  {
 		for (var i=0; i<av.coll.items.length; i++) {   
 			if (av.coll.items[i] instanceof av.wrc) {
 				all++;
-				health+=av.coll.items[i].health ;
 				if (av.coll.items[i].isRescured) {
+					health+=av.coll.items[i].health ;
 					rsc++;
 				}
 			}
 		}
 		var refHealth = 999 * all ;
-		console.log(all,rsc,health,refHealth);
-		return { all: all, rsc: rsc }
+		
+		return { all: all, rsc: rsc, earn: (health+(av.app.timer+1)*rsc*10)|0}
 	},
 	getWrcPos: function() {
 		var result = {};
@@ -1331,7 +1776,7 @@ av.app =  {
 					done = 0;
 				}
 			}
-			console.log(done) ;
+			
 		} while (!done);
 		
 		return result;
